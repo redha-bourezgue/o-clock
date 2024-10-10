@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minuteur, Chronomètre, Réveil, Horloge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="timer">
+        <h2>Minuteur</h2>
+        <input type="number" id="timerInput" placeholder="Temps en secondes">
+        <button id="startTimer">Démarrer</button>
+        <button id="stopTimer">Arrêter</button>
+        <div id="timerDisplay">00:00</div>
+    </div>
+    
+    <div id="stopwatch">
+        <h2>Chronomètre</h2>
+        <button id="startStopwatch">Démarrer/Arrêter</button>
+        <button id="lap">Tour</button>
+        <button id="resetStopwatch">Reset</button>
+        <div id="stopwatchDisplay">00:00:00</div>
+        <ul id="laps"></ul>
+    </div>
+    
+    <div id="clock">
+        <h2>Horloge</h2>
+        <div id="clockDisplay"></div>
+    </div>
+    
+    <div id="alarm">
+        <h2>Réveil</h2>
+        <input type="time" id="alarmTime">
+        <input type="text" id="alarmMessage" placeholder="Message d'alarme">
+        <button id="setAlarm">Définir l'alarme</button>
+        <ul id="alarmsList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

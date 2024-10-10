@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    background-color: #F5F5F5; /* Light background for a fresh look */
+    color: #333; /* Dark text color for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+div {
+    background: #FFFFFF; /* White background for containers */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 30px; /* Padding for better spacing */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+div:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+h2 {
+    margin-bottom: 15px; /* Margin for spacing */
+    font-size: 1.6rem; /* Font size for headings */
+    text-align: center; /* Centered headings */
+    color: #007BFF; /* Bright blue color for headings */
+}
+
+button {
+    margin-right: 10px;
+    padding: 10px 15px; /* Padding for buttons */
+    border: none;
+    border-radius: 5px; /* Rounded buttons */
+    background-color: #007BFF; /* Bright blue button color */
+    color: #FFFFFF; /* White text color */
+    cursor: pointer;
+    font-size: 1rem; /* Font size for buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+#timerDisplay, #stopwatchDisplay, #clockDisplay {
+    font-size: 2.5rem; /* Font size for time displays */
+    margin-top: 15px; /* Margin for spacing */
+    text-align: center; /* Centered text */
+}
+
+ul {
+    list-style-type: none; /* No bullet points */
+    padding: 0;
+    margin-top: 10px; /* Margin for spacing */
+}
+
+li {
+    background: #E9E9E9; /* Light gray background for list items */
+    color: #333; /* Dark text color for list items */
+    padding: 10px; /* Padding for list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    margin-bottom: 5px; /* Space between list items */
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+li:hover {
+    background: #D0D0D0; /* Slightly darker gray on hover */
+}
+
+/* Add this CSS for a new explosion effect */
+.explosion-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 69, 0, 0.9); /* Bright orange background */
+    color: #FFFFFF; /* White text color */
+    font-size: 2.5rem; /* Larger font size */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    animation: explode 1s forwards, shake 0.5s forwards; /* Animation */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+@keyframes explode {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5) rotate(10deg);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    25% { transform: translate(-50%, -50%) rotate(5deg); }
+    50% { transform: translate(-50%, -50%) rotate(-5deg); }
+    75% { transform: translate(-50%, -50%) rotate(5deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
